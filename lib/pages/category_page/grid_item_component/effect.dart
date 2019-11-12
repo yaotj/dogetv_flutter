@@ -3,7 +3,7 @@ import 'package:dogetv_flutter/pages/category_page/grid_item_component/action.da
 import 'package:dogetv_flutter/pages/video_page/page.dart';
 import 'package:dogetv_flutter/repository/dogeTV.dart';
 import 'package:fish_redux/fish_redux.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Action;
 
 Effect buildEffect() {
   return combineEffects(<Object, Effect>{

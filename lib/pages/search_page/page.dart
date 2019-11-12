@@ -13,7 +13,7 @@ class SearchPage extends Page<SearchPageState, Map<String, dynamic>> {
           initState: initState,
           reducer: buildReducer(),
           dependencies: Dependencies<SearchPageState>(
-              adapter: SearchResultListAdapter(),
+              adapter: NoneConn<SearchPageState>()+SearchResultListAdapter(),
               slots: <String, Dependent<SearchPageState>>{}),
         );
 }

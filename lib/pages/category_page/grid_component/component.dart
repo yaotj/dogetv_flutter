@@ -8,6 +8,6 @@ class VideoGridComponent extends Component<VideoGridState> {
       : super(
             view: buildView,
             dependencies: Dependencies<VideoGridState>(
-              adapter: VideoGridListAdapter(),
+              adapter: NoneConn<VideoGridState>()+VideoGridListAdapter(),
             ));
 }

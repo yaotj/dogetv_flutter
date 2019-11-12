@@ -13,7 +13,7 @@ class TopicDetailPage extends Page<TopicDetailPageState, Map<String, dynamic>> {
           initState: initState,
           reducer: buildReducer(),
           dependencies: Dependencies<TopicDetailPageState>(
-              adapter: TopicVideoListAdapter(),
+              adapter: NoneConn<TopicDetailPageState>()+TopicVideoListAdapter(),
               slots: <String, Dependent<TopicDetailPageState>>{}),
         );
 }

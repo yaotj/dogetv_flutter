@@ -13,7 +13,7 @@ class PlayerPage extends Page<PlayerPageState, Map<String, dynamic>> {
           initState: initState,
           reducer: buildReducer(),
           dependencies: Dependencies<PlayerPageState>(
-              adapter: PlayerListAdapter(),
+              adapter: NoneConn<PlayerPageState>()+PlayerListAdapter(),
               slots: <String, Dependent<PlayerPageState>>{}),
         );
 }

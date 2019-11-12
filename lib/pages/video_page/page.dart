@@ -13,7 +13,7 @@ class VideoPage extends Page<VideoPageState, Map<String, dynamic>> {
           initState: initState,
           reducer: buildReducer(),
           dependencies: Dependencies<VideoPageState>(
-              adapter: VideoDetailListAdapter(),
+              adapter: NoneConn<VideoPageState>()+VideoDetailListAdapter(),
               slots: <String, Dependent<VideoPageState>>{}),
         );
 }

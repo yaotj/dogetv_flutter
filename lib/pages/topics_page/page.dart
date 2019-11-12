@@ -13,7 +13,7 @@ class TopicsPage extends Page<TopicsPageState, Map<String, dynamic>> {
           initState: initState,
           reducer: buildReducer(),
           dependencies: Dependencies<TopicsPageState>(
-              adapter: TopicListAdapter(),
+              adapter: NoneConn<TopicsPageState>()+TopicListAdapter(),
               slots: <String, Dependent<TopicsPageState>>{}),
         );
 }

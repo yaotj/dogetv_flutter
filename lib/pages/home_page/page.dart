@@ -4,7 +4,6 @@ import 'package:dogetv_flutter/pages/home_page/state.dart';
 import 'package:dogetv_flutter/pages/home_page/effect.dart';
 import 'package:dogetv_flutter/pages/home_page/reducer.dart';
 import 'package:fish_redux/fish_redux.dart';
-import 'package:flutter/material.dart';
 
 class HomePage extends Page<HomePageState, Map<String, dynamic>> {
   HomePage()
@@ -15,7 +14,7 @@ class HomePage extends Page<HomePageState, Map<String, dynamic>> {
           reducer: buildReducer(),
 //          onError: onMessageError,
           dependencies: Dependencies<HomePageState>(
-              adapter: MovieGroupAdapter(),
+              adapter: NoneConn<HomePageState>()+ MovieGroupAdapter(),
               slots: <String, Dependent<HomePageState>>{}),
         );
 }

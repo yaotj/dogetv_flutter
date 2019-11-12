@@ -1,7 +1,7 @@
 import 'package:dogetv_flutter/pages/category_page/page.dart';
 import 'package:dogetv_flutter/pages/search_page/page.dart';
 import 'package:fish_redux/fish_redux.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Action;
 import 'package:dogetv_flutter/pages/home_page/action.dart';
 import 'package:dogetv_flutter/pages/home_page/state.dart';
 import 'package:dogetv_flutter/pages/tv_page/page.dart';
@@ -17,7 +17,7 @@ Effect<HomePageState> buildEffect() {
   });
 }
 
-void _init(Action action, Context<HomePageState> ctx) async {
+dynamic _init(Action action, Context<HomePageState> ctx) async {
   APIs.getHome().then((home) {
     ctx.dispatch(HomePageActionCreator.didLoadAction(home));
   });

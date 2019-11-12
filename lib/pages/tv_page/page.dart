@@ -14,7 +14,7 @@ class TVPage extends Page<TVPageState, Map<String, dynamic>> {
           initState: initState,
           reducer: buildReducer(),
           dependencies: Dependencies<TVPageState>(
-              adapter: TVListAdapter(),
+              adapter:  NoneConn<TVPageState>()+TVListAdapter(),
               slots: <String, Dependent<TVPageState>>{}),
         );
 }

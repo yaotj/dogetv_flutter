@@ -1,7 +1,7 @@
 import 'package:dogetv_flutter/pages/topic_page/page.dart';
 import 'package:dogetv_flutter/pages/topics_page/topic_item_component/action.dart';
 import 'package:fish_redux/fish_redux.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart'  hide Action;
 
 Effect buildEffect() {
   return combineEffects(<Object, Effect>{
